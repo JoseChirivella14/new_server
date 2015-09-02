@@ -1,3 +1,4 @@
+#This is a README for servers. No for desktop, you could but there's a lot of repos that it's not going to being use on desktop environments
 
 #Login as root
 ssh root@domain
@@ -6,8 +7,7 @@ ssh root@domain
 adduser <username> #Adds User with username given. Enter Password when Prompted. Other Details are Optional
 # Add user to sudo group
 usermod -g <groupname> <username>
-
-# Add .ssh/authorized_keys for deploy user
+Add .ssh/authorized_keys for deploy user
 
 #update and upgrade packages
 sudo apt-get update
@@ -21,8 +21,7 @@ curl -L get.rvm.io | bash -s stable
 
 # Source RVM
 source ~/.rvm/scripts/rvm
-
-# Relogin to shell
+*Relogin to shell*
 
 # RVM requirements
 rvm requirements
@@ -46,7 +45,7 @@ rvm rubygems current
 echo "gem: --no-rdoc --no-ri" >> .gemrc
 
 # Install rails
-gem install rails -v 4.1.7# to install specific version use like - gem install rails -v 3.0.1
+gem install rails -v 4.2.4 # to install specific version use like - gem install rails -v 3.0.1
 
 # Install passenger
 gem install passenger
@@ -83,5 +82,3 @@ root /var/www/my_awesome_rails_app/public;
 
 # Install mysql server and other related components
 sudo apt-get install mysql-server libmysqld-dev
-
-# Now use capistrano to deploy rails app
