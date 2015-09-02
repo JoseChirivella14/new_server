@@ -11,4 +11,4 @@ rvm install 2.2.0
 rvm --default use 2.2.0
 rvm rubygems current
 echo "gem: --no-rdoc --no-ri" >> .gemrc
-gem install rails -v 4.1.7
+gem install rails -v 4.2.2
