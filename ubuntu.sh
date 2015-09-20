@@ -11,7 +11,7 @@ git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-buil
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 echo Install Ruby
-rbenv install -v 2.2.0
+rbenv install 2.2.0
 rbenv global 2.2.0
 echo "gem: --no-document" > ~/.gemrc
 echo Installing Bundler
