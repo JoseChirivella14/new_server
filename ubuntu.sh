@@ -1,7 +1,7 @@
 #! /bin/sh
 echo This functionality of this script its to install Ruby on Rails
 sudo apt-get update
-sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev postgresql postgresql-contrib
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev postgresql postgresql-contrib libpq-dev
 echo Installing rbenv 
 cd
 git clone git://github.com/sstephenson/rbenv.git .rbenv
