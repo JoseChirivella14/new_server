@@ -23,47 +23,26 @@ sudo apt-get upgrade
 ```
 sudo apt-get install curl
 ```
+# Install dependencies that Rbenv and Ruby requires.
+```
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+```
+# After you install those packages. We are ready to install rbenv.
+```
+cd
+git clone git://github.com/sstephenson/rbenv.git .rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
-# Install RVM
-```
-curl -L get.rvm.io | bash -s stable
-```
-
-
-# Source RVM
-```
-source ~/.rvm/scripts/rvm
-```
-*Relogin to shell*
-
-# RVM requirements
-```
-rvm requirements
+git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 ```
 
-# Enable RVM autolibs to autoinstall requirements
+# Install Ruby
 ```
-rvm autolibs enable
-```
-
-# RVM requirements again
-```
-rvm requirements
-```
-
-# Install ruby
-```
-rvm install 2.2.0
-```
-
-# Set default
-```
-rvm --default use 2.2.0
-```
-
-# Install current ruby gems
-```
-rvm rubygems current
+rbenv install -v <the version you want. Example: 2.2.4>
+rbenv global <the version you installed>
 ```
 
 # Before installing set gem config to NOT do rdoc and ri installation
@@ -71,9 +50,19 @@ rvm rubygems current
 echo "gem: --no-rdoc --no-ri" >> .gemrc
 ```
 
+# Install Bundler
+```
+gem install bundler
+```
+
 # Install rails
 ```
 gem install rails -v 4.2.4 # to install specific version use like - gem install rails -v 3.0.1
+```
+
+# Whenever you install a new version of Ruby or a gem that provides commands, you should run the rehash sub-command. This will install shims for all Ruby executables known to rbenv, which will allow you to use the executables:
+```
+rbenv rehash
 ```
 
 # Install passenger
@@ -83,7 +72,7 @@ gem install passenger
 
 # Install Nginx
 ```
-rvmsudo passenger-install-nginx-module
+passenger-install-nginx-module
 ```
 
 # Make nginx service as per http://askubuntu.com/questions/257108/trying-to-start-nginx-on-vps-i-get-nginx-unrecognized-service
