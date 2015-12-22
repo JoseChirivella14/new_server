@@ -11,7 +11,7 @@ adduser <username> #Adds User with username given. Enter Password when Prompted.
 ```
 usermod -g <groupname> <username>
 ```
-Add .ssh/authorized_keys for deploy user
+Add your ssh public key to .ssh/authorized_keys for deploy user
 
 #update and upgrade packages
 ```
