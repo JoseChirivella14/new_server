@@ -1,10 +1,5 @@
 #This is a README for servers. No for desktop, you could but there's a lot of repos that it's not going to being use on desktop environments
 
-#Login as root
-```
-ssh root@domain
-```
-
 # Create deploy user
 adduser <username> #Adds User with username given. Enter Password when Prompted. Other Details are Optional
 # Add user to sudo group
