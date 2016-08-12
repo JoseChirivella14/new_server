@@ -17,6 +17,7 @@ Basically you are giving your user the ability to Create Databases and to give *
 
 To create the database of our User, the name has to be the same as our User.
 ```
-CREATEDB YouUser WITH OWNER YourUser;
+CREATE DATABASE YouUser OWNER YourUser;
+```
 
 That's it... You successfully created an User, Database and permissions to that User.
