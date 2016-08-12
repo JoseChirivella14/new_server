@@ -104,19 +104,9 @@ sudo vim /opt/nginx/conf/nginx.conf
 # Make following settings in nginx conf
 ```
 server {
-listen 80;
-server_name example.com;
-passenger_enabled on;
-root /var/www/my_awesome_rails_app/public;
+  listen 80;
+  server_name <Your Domain>.com;
+  passenger_enabled on;
+  root /my_awesome_rails_app/public;
 }
-```
-
-# Install nodejs if not previously installed
-```
-sudo apt-get install nodejs
-```
-
-# Install mysql server and other related components
-```
-sudo apt-get install mysql-server libmysqld-dev
 ```
