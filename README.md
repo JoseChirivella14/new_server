@@ -6,6 +6,11 @@ adduser <username> #Adds User with username given. Enter Password when Prompted.
 ```
 usermod -g <groupname> <username>
 ```
+
+# Run the SSH Keygen command to generate a SSH Private / Public key to access the server remotely and secure. Use only the .pub key which it's going to be your public key.
+```
+ssh-keygen
+```
 Add your ssh public key to .ssh/authorized_keys for deploy user
 
 #update and upgrade packages
