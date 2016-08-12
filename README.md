@@ -20,7 +20,7 @@ sudo apt-get install curl
 ```
 # Install dependencies that Rbenv and Ruby requires.
 ```
-sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+sudo apt-get install git build-essential libssl-dev libcurl4-openssl-dev openssl libreadline libreadline-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev libxslt1-dev autoconf libc6-dev ncurses-dev automake libtool python-software-properties libffi-dev
 ```
 # After you install those packages. We are ready to install rbenv.
 ```
@@ -28,7 +28,6 @@ cd
 git clone git://github.com/sstephenson/rbenv.git .rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-
 git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
@@ -36,7 +35,7 @@ source ~/.bashrc
 
 # Install Ruby
 ```
-rbenv install -v <the version you want. Example: 2.2.4>
+rbenv install <the version you want. Example: 2.2.4>
 rbenv global <the version you installed>
 ```
 
@@ -89,7 +88,7 @@ sudo /usr/sbin/update-rc.d -f nginx defaults
 
 # Start nginx
 ```
-sudo service nginx start 
+sudo service nginx start
 ```
 
 # Connect Nginx to rails project
@@ -99,11 +98,11 @@ sudo vim /opt/nginx/conf/nginx.conf
 
 # Make following settings in nginx conf
 ```
-server { 
-listen 80; 
-server_name example.com; 
-passenger_enabled on; 
-root /var/www/my_awesome_rails_app/public; 
+server {
+listen 80;
+server_name example.com;
+passenger_enabled on;
+root /var/www/my_awesome_rails_app/public;
 }
 ```
 

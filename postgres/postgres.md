@@ -19,4 +19,4 @@ To create the database of our User, the name has to be the same as our User.
 ```
 CREATEDB YouUser WITH OWNER YourUser;
 
-Thats it... You succesfully created an User, Database and gived permission to that User.
+That's it... You successfully created an User, Database and permissions to that User.
