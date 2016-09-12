@@ -1,4 +1,4 @@
-#This is a README for servers. No for desktop, you could but there's a lot of repos that it's not going to being use on desktop environments
+# Instructions to Install Ruby and Ruby on Rails on Ubuntu. No macOS.
 
 # Create deploy user
 adduser <username> #Adds User with username given. Enter Password when Prompted. Other Details are Optional
