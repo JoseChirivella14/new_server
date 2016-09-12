@@ -1,5 +1,5 @@
 #! /bin/sh
-echo This functionality of this script it's to install Ruby and Ruby on Rails
+echo This functionality of this script its to install Ruby and Ruby on Rails
 sudo apt-get update
 sudo apt-get install git build-essential libssl-dev libcurl4-openssl-dev openssl libreadline libreadline-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev libxslt1-dev autoconf libc6-dev ncurses-dev automake libtool python-software-properties libffi-dev
 cd
