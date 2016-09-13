@@ -1,17 +1,18 @@
 # Instructions to Install Ruby and Ruby on Rails on Ubuntu. No macOS.
 
 # Create deploy user
-adduser <username> #Adds User with username given. Enter Password when Prompted. Other Details are Optional
+`adduser <username>` #Adds User with username given. Enter Password when Prompted. Other Details are Optional
 # Add user to sudo group
 ```
-usermod -g <groupname> <username>
+sudo visudo
 ```
 
 # Run the SSH Keygen command to generate a SSH Private / Public key to access the server remotely and secure. Use only the .pub key which it's going to be your public key.
 ```
-ssh-keygen
+ssh-keygen -t rsa -C <yourEmail>
 ```
-Add your ssh public key to .ssh/authorized_keys for deploy user
+
+* Create a file called `authorized_keys` under the `.ssh` folder, copy your public ssh key here to access the server without a pem key.
 
 #update and upgrade packages
 ```
