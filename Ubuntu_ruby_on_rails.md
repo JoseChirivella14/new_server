@@ -26,7 +26,7 @@ sudo apt-get install curl
 ```
 # Install dependencies that Rbenv and Ruby requires.
 ```
-sudo apt-get install git build-essential libssl-dev libcurl4-openssl-dev openssl curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev libxslt1-dev autoconf ncurses-dev automake libtool python-software-properties libffi-dev
+sudo apt-get install git build-essential libssl-dev libcurl4-openssl-dev openssl curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev libxslt1-dev autoconf ncurses-dev automake libtool python-software-properties libffi-dev libreadline-dev
 ```
 # After you install those packages. We are ready to install rbenv.
 ```
