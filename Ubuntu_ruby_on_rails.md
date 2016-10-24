@@ -111,3 +111,23 @@ server {
   root /my_awesome_rails_app/public;
 }
 ```
+# Postgres (optional)
+```
+sudo apt-get -y install postgresql postgresql-client postgresql-contrib
+```
+
+### Login as user postgres
+```
+sudo -u postgres psql postgres
+```
+### You are inside the postgres command propmt. You can create user, passwords for users and create databases!
+
+##### To connect via PgAdmin
+```
+CREATE EXTENSION adminpack;
+```
+
+##### To exit the psql commnad propmt.
+```
+\q
+```
